@@ -26,7 +26,7 @@
     }
 </script>
 <label class="photo" class:empty={!$photo}>
-    <img src={$photo} alt="Photo"/>
+    <img src={$photo} alt="Photo" alt="photo"/>
     <input type="file" on:change={onChange}>
 </label>
 <style lang="less">

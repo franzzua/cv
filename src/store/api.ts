@@ -3,9 +3,9 @@ import {
     deleteFile,
     getPodUrlAll,
     getSolidDataset,
-    saveSolidDatasetAt, createSolidDataset
+    saveSolidDatasetAt
 } from "@inrupt/solid-client";
-import { fetch, getDefaultSession } from "@inrupt/solid-client-authn-browser";
+import { fetch } from "@inrupt/solid-client-authn-browser";
 import { setPublicAccess } from "@inrupt/solid-client/universal";
 import type { CV } from "./cv";
 import {parse, serialize} from "./converter";

@@ -20,6 +20,7 @@ function select(p: string){
     <select bind:value={path[0]}>
         <option value={undefined}>Select</option>
         {#await getPods($session.webId)}
+            Loading...
         {:then pods}
         {#each pods as pod}
             <option value={pod}>{pod}</option>
@@ -27,11 +28,12 @@ function select(p: string){
         {/await}
     </select>
     {#await getFiles(path.join(''))}
+        Loading...
     {:then files}
     {#each files as file}
-        <div class:folder={file.endsWith('/')}
-             class="file"
-             class:selected={selectedFile == file} on:click={() => select(file)}>{file}</div>
+        <button class:folder={file.endsWith('/')} class="file"
+             class:selected={selectedFile === file} 
+             on:click={() => select(file)}>{file}</button>
     {/each}
     {/await}
     {#if selectedFile}
@@ -43,6 +45,12 @@ function select(p: string){
 </div>
 <style lang="less">
   .file {
+    border: none;
+    padding: .5em 1em;
+    background: transparent;
+    cursor: pointer;
+    margin: 0;
+    display: block;
     &.folder:before {
       content: '*';
     }

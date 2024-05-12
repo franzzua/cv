@@ -1,4 +1,3 @@
-import { rdf as r } from 'rdf-namespaces';
 import {
     getThing,
     type SolidDataset,
@@ -44,7 +43,7 @@ export const rdf = {
         if (!def) throw `Unknown type ${target}`;
         const uri = `${datasetURI}#${id}`;
         let thing = getThing(dataset, uri) ?? createThing({name: id});
-        thing = setUrl(thing, r.type, `${def.namespace}#${def.subject}`)
+        thing = setUrl(thing, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", `${def.namespace}#${def.subject}`)
         for (let predicate of predicates.filter(x => x.target == target)) {
             const predicateURI = `${predicate.namespace ?? def.namespace}#${predicate.predicate}`;
             let value = data[predicate.property as keyof T] as any;
