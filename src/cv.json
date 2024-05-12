@@ -1,0 +1,2214 @@
+{
+  "@graph":[
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "CV subclass of WordNet Curriculum Vitae"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://xmlns.com/wordnet/1.6/Curriculum_Vitae"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV_Entry",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "CV_Entry"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Single entry of CV information. Type of CV information specified in subclasses"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Company",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "A class for company information."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Company"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Organization"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Country",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Country where the company is located."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Country"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Organization"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.daml.org/2001/09/countries/countries.daml#"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Course",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "CV entry for courses taken"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Course"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV_Entry"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Education",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "CV entry for education"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Education"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV_Entry"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#EducationalOrg",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Educational organization (university, ...)"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "EducationalOrg"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Organization"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Industry",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Industry of the company"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Industry"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Company"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#LanguageSkill",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "LanguageSkill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Language skill.\nContains 3 levels for skill: spoken, written, reading.\nInherited skill level used for spoken."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Skill"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Locality",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Region / state of the company."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Locality"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Organization"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Name",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Name of the company"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Name"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Organization"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Notes",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Notes about the company."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Notes"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Organization"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Organization",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "General class for organizations"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Organization"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#OtherInfo",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Other information in CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "OtherInfo"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV_Entry"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "CV subclass of WordNet person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://xmlns.com/wordnet/1.6/Person"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#PersonalReference",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Personal reference"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "PersonalRefernece"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Reference"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#ProfessionalReference",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Professional reference"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "ProfessionalRefernece"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Reference"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Reference"
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Refernece",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "CV entry for references"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Refernece"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV_Entry"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Skill",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Skill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "CV entry for description of skills"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV_Entry"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "CV information for target of job application.\n(Single entry per CV. May be defined in the properties of CV class instead)."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV_Entry"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#URL",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Company home page"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "URL"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Organization"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory",
+      "@type": [
+        "http://www.w3.org/2000/01/rdf-schema#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "CV entry for work history"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "WorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV_Entry"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#aboutPerson",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "aboutPerson"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#birthPlace",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Place of birth of the person."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "birthPlace"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#careerLevel",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Career level for the position in company."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "careerLevel"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#CVCareerLevel"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#conditionWillRelocate",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Is candidate willing to relocate?"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "conditionWillRelocate"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#BooleanValue"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#conditionWillTravel",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Is candidate willing to travel?"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "conditionWillTravel"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#BooleanValue"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#courseDescription",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description of the course / certification."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "courseDescription"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Course"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#courseFinishDate",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Date when course was finished / certification acquired."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "courseFinishDate"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Course"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#courseStartDate",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Start date of the course taken."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "courseStartDate"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Course"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#courseTitle",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Title of the course taken or certification acquired."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "courseTitle"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Course"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#courseURL",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "courseURL"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Web page of the courses taken / certification acquired. May be pointer to certification transcript."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Course"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#cvCopyright",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Copyright notice - who owns rights to CV, how may it be used, other legal info."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "cvCopyright"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#cvDescription",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Text describing what the person wants to accomplish by this CV; what is s/he looking for; ..."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "cvDescription"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#cvIsActive",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If the CV is active and the person is actively looking for job opportunities."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "cvIsActive"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#cvIsConfidential",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "If the CV is confidential and may be used by receiving party only."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "cvIsConfidential"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#cvTitle",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "CV title."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "cvTitle"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#degreeType",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "degreeType"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Type (title) of the degree."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Education"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#EduDegree"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#eduDescription",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description of the education info."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "eduDescription"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Education"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#eduGradDate",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "eduGradDate"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Education end (graducation) date (YYYY-MM-DD)\nMay contain only year or year and month."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Education"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#eduMajor",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Major speciality graduated."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "eduMajor"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Education"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#eduMinor",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Minor speciality(-ies) graduated."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "eduMinor"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Education"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#eduStartDate",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "eduStartDate"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Education start date (YYYY-MM-DD)\nMay contain only year or year and month."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Education"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#employedIn",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "The company where the person is/was employed."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "employedIn"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Company"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#endDate",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "endDate"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "End date of employment.\nFormat: YYYY-MM-DD\nMay containt only year or year and month."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#gender",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "gender"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Gender property (man/woman)"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#SexProperty"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasCitizenship",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasCitizenship"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Person's citizenship."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.daml.org/2001/09/countries/countries.daml#"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasCourse",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasCourse"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Course"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasDriversLicense",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasDriversLicense"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indicates if the person has drivers license (for regular cars)."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#BooleanValue"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasEducation",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasEducation"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Education"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasNationality",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Person's nationality."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasNationality"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasOtherInfo",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasOtherInfo"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#OtherInfo"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasReference",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasReference"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Refernece"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasSkill",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasSkill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Skill"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasTarget",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasTarget"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#hasWorkHistory",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "hasWorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#isCertification",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Does this course entry include certification?"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "isCertification"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Course"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#BooleanValue"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#isCurrent",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indicates if this is a current workplace."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "isCurrent"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#BooleanValue"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#jobDescription",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description of the job in company."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "jobDescription"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#jobTitle",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Title in the company."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "jobTitle"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#jobType",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Type of the job: employee / contractor / intern"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "jobType"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#CVJobType"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#languageSkill"
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#lastUpdate",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Date when the information in CV was last updated."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "lastUpdate"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#CV"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#lngSkillLevelReading",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Reading level of language skill. (0..5)"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "lngSkillLevelReading"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#languageSkill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#lngSkillLevelWritten",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Level of writing skills for language. (0..5)"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "lngSkillLevelWritten"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#languageSkill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#maritalStatus",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "familyStatus"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Indicates person's marital status."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#MaritalStatus"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#noOfChildren",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Number of children the person has."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "noOfChildren"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#numSubordinates",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Number of subordinates."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "numSubordinates"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#organizedBy",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "organizedBy"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Organization that organized courses and/or provided certification."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Course"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Organization"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#otherInfoDescription",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description - content of misc CV information."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "otherInfoDescription"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#OtherInfo"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#otherInfoType",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "otherInfoType"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Type of other CV information (interests / awards / accomplishments / point of view / membership / social activities / other)"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#OtherInfo"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#OtherCVInfoType"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#referenceBy",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Points to a person who provides the reference."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "referenceBy"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Person"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Refernece"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#skillLastUsed",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Date when skill was last used."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "skillLastUsed"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Skill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#skillLevel",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Level of the skill (0..5)"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "skillLevel"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Skill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#skillName",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Name of the skill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "skillName"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Skill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#skillYearsExperience",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Year of experience in this skill."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "skillYearsExperience"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Skill"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#startDate",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "startDate"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Start date of employment.\nFormat: YYYY-MM-DD\nMay containt only year or year and month."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#WorkHistory"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#studiedIn",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Educational organization where person studied."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "studiedIn"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Education"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#EducationalOrg"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetCareerLevel",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetCareerLevel"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Target career level."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#CVCareerLevel"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetCompanyDescription",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetCompanyDescription"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description on the company where the candidate would like to work."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetCompanyIndustry",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Industry of the company where the candidate would like to work."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetCompanyIndustry"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetCompanySize",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Size of the target company."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetCompanySize"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetCountry",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetCountry"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Country where would like to work.\n"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.daml.org/2001/09/countries/countries.daml#"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetJobDescription",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Description of the job applicant is seeking. Notes."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetJobDescription"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetJobMode",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Job mode: full-time / part-time"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetJobMode"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#CVJobMode"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetJobType",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetJobType"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Target job type."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/base.rdfs#CVJobType"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetSalary",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://protege.stanford.edu/system#maxCardinality": [
+        {
+          "@value": "1"
+        }
+      ],
+      "http://protege.stanford.edu/system#range": [
+        {
+          "@value": "integer"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Target salary"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetSalary"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#targetSalaryCurrency",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://protege.stanford.edu/system#maxCardinality": [
+        {
+          "@value": "1"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "targetSalaryCurrency"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Currency for target salary."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://rdfs.org/resume-rdf/cv.rdfs#weeksNoticePeriod",
+      "@type": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@value": "Notice period in weeks when can start to work."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@value": "weeksNoticePeriod"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "http://rdfs.org/resume-rdf/cv.rdfs#Target"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.daml.org/2001/09/countries/countries.daml#"
+    },
+    {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Class"
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    {
+      "@id": "http://xmlns.com/wordnet/1.6/Curriculum_Vitae"
+    },
+    {
+      "@id": "http://xmlns.com/wordnet/1.6/Person"
+    }
+  ]
+}

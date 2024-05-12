@@ -1,0 +1,46 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  min-height: 100vh;
+  background: #4456;
+  --aside: #213547;
+  --background: #FFF;
+  --color: #213547;
+  --colorAside: #FFF;
+  --hoverBg: #89A;
+  --hoverColor: #444;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #444;
+    --background: #222;
+    --aside: #66666A;
+    --color: #BBB;
+    --colorAside: #BBB;
+    --hoverBg: #89A;
+    --hoverColor: #444;
+  }
+}
+
+summary{
+  cursor: pointer;
+  background: transparent;
+}
+summary::marker{
+  content: none;
+}

@@ -1,0 +1,200 @@
+
+BASE <http://schema.org/>
+
+
+
+<http://rdfs.org/resume-rdf/cv.rdfs#CVSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#CV_EntrySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#CompanySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#CountrySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#CourseSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#EducationSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#EducationalOrgSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#IndustrySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#LanguageSkillSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#LocalitySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#NameSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#NotesSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#OrganizationSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#OtherInfoSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#PersonSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#PersonalReferenceSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#ProfessionalReferenceSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#ReferenceSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#ReferneceSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#SkillSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#TargetSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#URLSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#WorkHistorySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#aboutPersonSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#birthPlaceSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#careerLevelSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#conditionWillRelocateSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#conditionWillTravelSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#courseDescriptionSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#courseFinishDateSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#courseStartDateSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#courseTitleSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#courseURLSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#cvCopyrightSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#cvDescriptionSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#cvIsActiveSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#cvIsConfidentialSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#cvTitleSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#degreeTypeSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#eduDescriptionSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#eduGradDateSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#eduMajorSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#eduMinorSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#eduStartDateSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#employedInSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#endDateSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#genderSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasCitizenshipSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasCourseSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasDriversLicenseSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasEducationSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasNationalitySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasOtherInfoSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasReferenceSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasSkillSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasTargetSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#hasWorkHistorySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#isCertificationSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#isCurrentSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#jobDescriptionSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#jobTitleSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#jobTypeSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#languageSkillSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#lastUpdateSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#lngSkillLevelReadingSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#lngSkillLevelWrittenSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#maritalStatusSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#noOfChildrenSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#numSubordinatesSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#organizedBySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#otherInfoDescriptionSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#otherInfoTypeSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#referenceBySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#skillLastUsedSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#skillLevelSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#skillNameSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#skillYearsExperienceSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#startDateSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#studiedInSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetCareerLevelSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetCompanyDescriptionSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetCompanyIndustrySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetCompanySizeSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetCountrySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetJobDescriptionSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetJobModeSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetJobTypeSh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetSalarySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#targetSalaryCurrencySh> LITERAL
+
+<http://rdfs.org/resume-rdf/cv.rdfs#weeksNoticePeriodSh> LITERAL
+
+<http://www.daml.org/2001/09/countries/countries.daml#Sh> LITERAL
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#PropertySh> LITERAL
+
+<http://www.w3.org/2000/01/rdf-schema#ClassSh> LITERAL
+
+<http://www.w3.org/2000/01/rdf-schema#LiteralSh> LITERAL
+
+<http://www.w3.org/2000/01/rdf-schema#ResourceSh> LITERAL
+
+<http://xmlns.com/wordnet/1.6/Curriculum_VitaeSh> LITERAL
+
+<http://xmlns.com/wordnet/1.6/PersonSh> LITERAL
+
+
